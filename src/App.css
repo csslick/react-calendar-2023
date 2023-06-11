@@ -65,3 +65,8 @@ ul {
   background: red;
   border-radius: 10px;
 }
+
+.dayNames:nth-child(1),
+.dayNames:nth-child(7) {
+  color: #999;
+}

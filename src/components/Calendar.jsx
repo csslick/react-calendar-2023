@@ -7,6 +7,7 @@ export default function Calendar(props) {
   let lastDate = new Date(year, month + 1, 0).getDate(); // 현재 년-월의 마지막 말일 구하기
   let start_date = new Date(year, month, 1).getDay(); // 요일(달력에서 시작할 위치 참조)
   console.log(lastDate, start_date);
+  const dayNames = ['일', '월', '화', '수', '목', '금', '토'];
 
   return (
     <div className='calendar'>
@@ -16,6 +17,11 @@ export default function Calendar(props) {
       </header>
     
       <ul className='date'>
+        {
+          dayNames.map((name, i) => (
+            <li className='dayNames' key={i}>{name}</li>
+          ))
+        }
         { Array(start_date).fill().map((_, i) => (
           <li key={i} data-desc='빈칸추가'></li>
         ))}
