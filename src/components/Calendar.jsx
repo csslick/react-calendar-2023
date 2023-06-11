@@ -21,7 +21,7 @@ export default function Calendar(props) {
         ))}
         {
           Array(lastDate).fill().map((_, i) => (
-            <li 
+            <li
               data-desc='여기부터 표시'
               key={i} 
               style={{
@@ -30,6 +30,9 @@ export default function Calendar(props) {
                   month === d.getMonth() && 
                   year === d.getFullYear() ? 'red' : '',
                 borderRadius: '10px',
+                color: 
+                  new Date(year, month, i + 1).getDay() === 0 || 
+                  new Date(year, month, i + 1).getDay() === 6 ? '#999' : ''
               }}
             >{i + 1}</li>
           ))
