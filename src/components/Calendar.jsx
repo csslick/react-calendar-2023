@@ -31,16 +31,6 @@ export default function Calendar(props) {
                 new Date(year, month, i + 1).getDay() === 0 || 
                 new Date(year, month, i + 1).getDay() === 6 ? 'holyday' : ''                
               }
-              // style={{
-              //   backgroundColor: 
-              //     date === i + 1 && 
-              //     month === d.getMonth() && 
-              //     year === d.getFullYear() ? 'red' : '',
-              //   borderRadius: '10px',
-              //   color: 
-              //     new Date(year, month, i + 1).getDay() === 0 || 
-              //     new Date(year, month, i + 1).getDay() === 6 ? '#999' : ''
-              // }}
             >{i + 1}</li>
           ))
         }
