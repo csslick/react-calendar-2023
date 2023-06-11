@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.calendar {
+  width: 400px;
+  background: #000;
+  color: #eee;
+  padding: 1rem;
+  padding-top: 2rem;
+}
+
+.calendar ul.date {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+}
+
+.calendar ul.date li {
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  padding: 0.5rem;
+}
+
+.calendar header {
+  display: flex;  
+}
+
+:where(.calendar) h2, span { 
+  margin: 0;
+}
+
+.calendar h2 {
+  font-size: 40px;
+  line-height: 40px;
+  margin-right: 1rem;
+}
+
+.btn-group {
+  margin-top: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
