@@ -24,16 +24,23 @@ export default function Calendar(props) {
             <li
               data-desc='여기부터 표시'
               key={i} 
-              style={{
-                backgroundColor: 
-                  date === i + 1 && 
-                  month === d.getMonth() && 
-                  year === d.getFullYear() ? 'red' : '',
-                borderRadius: '10px',
-                color: 
-                  new Date(year, month, i + 1).getDay() === 0 || 
-                  new Date(year, month, i + 1).getDay() === 6 ? '#999' : ''
-              }}
+              className={
+                date === i + 1 && 
+                month === d.getMonth() && 
+                year === d.getFullYear() ? 'today' : 
+                new Date(year, month, i + 1).getDay() === 0 || 
+                new Date(year, month, i + 1).getDay() === 6 ? 'holyday' : ''                
+              }
+              // style={{
+              //   backgroundColor: 
+              //     date === i + 1 && 
+              //     month === d.getMonth() && 
+              //     year === d.getFullYear() ? 'red' : '',
+              //   borderRadius: '10px',
+              //   color: 
+              //     new Date(year, month, i + 1).getDay() === 0 || 
+              //     new Date(year, month, i + 1).getDay() === 6 ? '#999' : ''
+              // }}
             >{i + 1}</li>
           ))
         }

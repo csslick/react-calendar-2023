@@ -56,3 +56,12 @@ ul {
   gap: 10px;
 }
 
+.holyday {
+  color: #999;
+}
+
+.today {
+  color: #fff;
+  background: red;
+  border-radius: 10px;
+}
